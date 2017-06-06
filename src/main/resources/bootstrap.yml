@@ -1,4 +1,14 @@
+spring.profiles.active: development
+---
 spring:
+  profiles: development
+  application:
+    name: inventory-service
+server:
+  port: 8882
+---
+spring:
+  profiles: production
   application:
     name: inventory-service
 server:
