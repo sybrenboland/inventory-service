@@ -29,7 +29,7 @@ install:
 - mvn dependency:go-offline
 
 script:
-- mvn clean install
+- mvn clean install sonar:sonar -Dsonar.host.url=https://sonarqube.com -Dsonar.login=$SONAR_TOKEN
 
 after_success:
 - docker login -u $DOCKER_USER -p $DOCKER_PASS
