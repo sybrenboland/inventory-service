@@ -13,9 +13,6 @@ env:
 addons:
   sonarqube:
     organization: sybrenboland-github
-  sonar:
-    token:
-      secure: KduYMiv5reZZmWAnEyHGHrsRMwyKyLoJo+kVk3sxC24Qiazvj8vX7lZEeZcMF16pqDggwkx47yMfwjR/FpKkTmil/zBNyviEPzWj7ZT8+dfBTPYCijBOsHh79HmpDA+lgfHZjkEeXksPl7h4HH/IDGqVR04TvHen72zuaAJoZVfwcJFATtP2n5VBeO88xtjJsQ0wyL0ZYCxiHXsaQVkeXZ3lIbZlzPBg1cdyg1dogSSRx3dlXyAi6xkyw7izGnl8WzI8jbvYMFN2atqrqx2Cltm+zwu+2W0Tz5CDb9ndAYFqE6DmAkFA9Cn8l/JJ4uCWX66USxxuK4i45L39LBZcYxc4tmnvuyIJTSFoaK3bw8r0NxUojDZ8lRQwZiQwW5DCBJyId/suASIxSGd69r9zxzyENnvOEe0myWEWB94Y/t+n+mRUDd8voAxo1iZoGpKi36VWF8TOrF7drT8UHIw+o3ShwENncpfgHW8E9iSN2pa/01p/Y3GHLn/rB+ULqmsoNURORTs0iizW36RGppEeZum3TTEdMvTjJnt73HS3nigbG3P4HZjitafkAn7sDsC6s6B00TCw/y7ZnqKAw5afyevf0RQMUIfB39r0V836V4UFdtgbIMLZeFOkWizZ0qCReuWl2O+0mzn/nzT6GMXzsyN/7Fdtzk3L7qvRW1IQXPQ=
 cache:
   directories:
   - "$HOME/.m2"
