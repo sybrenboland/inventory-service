@@ -9,12 +9,6 @@ public class Product {
     public Product() {}
 
     public Product(long id, String name, String description) {
-        try {
-
-        } catch(Exception e) {
-
-        }
-
         this.id = id;
         this.name = name;
         this.description = description;
