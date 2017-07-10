@@ -1,4 +1,4 @@
-package org.shboland.model;
+package org.shboland.model.product;
 
 public class Product {
 
