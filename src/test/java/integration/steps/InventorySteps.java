@@ -2,12 +2,12 @@ package integration.steps;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import model.Product;
+import org.shboland.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.ContextConfiguration;
-import resource.InventoryApplication;
+import org.shboland.InventoryApplication;
 
 import static org.junit.Assert.assertEquals;
 
