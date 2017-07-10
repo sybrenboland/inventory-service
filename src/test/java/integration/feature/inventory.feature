@@ -5,4 +5,4 @@ Feature: Inventory
 
   Scenario: Get the products
     When I ask for the products
-    Then I get a '2' results
+    Then I get a '0' results

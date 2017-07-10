@@ -2,12 +2,36 @@ spring.profiles.active: development
 ---
 spring:
   profiles: development
+  datasource:
+    url: jdbc:mysql://localhost:3306/dev
+    username: root
+    password: mysqlpass
+    platform: mysql
+eureka:
+  client:
+    enabled: false
+---
+spring:
+  profiles: test
+  datasource:
+    url: jdbc:h2:file:~/test
+    username: sa
+    password: sa
+    driver-class-name: org.h2.Driver
 eureka:
   client:
     enabled: false
 ---
 spring:
   profiles: production
+  jpa:
+    show_sql: false
+    database: MYSQL
+    generate-ddl: true
+  datasource:
+    url: jdbc:mysql://mysql:3306/dev
+    username: root
+    password: dbpass
 eureka:
   instance:
     prefer-ip-address: true
