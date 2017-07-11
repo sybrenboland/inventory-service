@@ -1,24 +1,37 @@
 package org.shboland.resource;
 
-import org.shboland.model.Product;
+import org.shboland.model.product.Product;
+import org.shboland.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import java.util.ArrayList;
+import java.net.URI;
 import java.util.List;
 
 @RestController
 public class ProductController implements IProductController {
 
+    @Autowired
+    private ProductService productService;
+
     @Override
     public List<Product> getProducts() {
+        return productService.getProductList();
+    }
 
-        List<Product> productList = new ArrayList<>();
+    @Override
+    public ResponseEntity addProduct(@RequestBody Product product) {
 
-        Product product1 = new Product(1, "Wooden chair", "This is a oak hand made chair.");
-        productList.add(product1);
-        Product product2 = new Product(2, "Suede poof", "Original maroccan poof.");
-        productList.add(product2);
+        productService.addProduct(product);
 
-        return productList;
+        URI location = ServletUriComponentsBuilder
+                .fromCurrentRequest()
+                .path("/")
+                .buildAndExpand().toUri();
+
+        return ResponseEntity.created(location).build();
     }
 }
