@@ -3,10 +3,9 @@ spring.profiles.active: development
 spring:
   profiles: development
   datasource:
-    url: jdbc:mysql://localhost:3382/inventoryDB
-    username: root
-    password: mysqlpass
-    platform: mysql
+    url: jdbc:postgresql://localhost:5482/postgres
+    username: pgroot
+    password: pgpass
 liquibase:
   change-log: classpath:/liquibase/db-changelog.xml
 eureka:
@@ -16,7 +15,7 @@ eureka:
 spring:
   profiles: test
   datasource:
-    url: jdbc:h2:file:~/inventoryDB
+    url: jdbc:h2:file:~/target/db/inventoryDB
     username: sa
     password: sa
     driver-class-name: org.h2.Driver
@@ -30,11 +29,11 @@ spring:
   profiles: production
   jpa:
     show_sql: false
-    database: MYSQL
+    database: POSTGRESQL
     generate-ddl: true
   datasource:
-    url: jdbc:mysql://mysql:3382/inventoryDB
-    username: root
+    url: jdbc:postgresql://postgres:5432/postgres
+    username: pgroot
     password: dbpass
 liquibase:
   change-log: classpath:/liquibase/db-changelog.xml

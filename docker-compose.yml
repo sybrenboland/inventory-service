@@ -1,7 +1,7 @@
-mysql:
-  image: mysql:5.7
+postgres:
+  image: postgres:9.6.3
   ports:
-   - 3382:3306
+    - 5482:5432
   environment:
-   - MYSQL_ROOT_PASSWORD=mysqlpass
-   - MYSQL_DATABASE=inventoryDB
+    POSTGRES_USER: pgroot
+    POSTGRES_PASSWORD: pgpass
